@@ -44,13 +44,19 @@ import { LocationRowComponent } from './locations/location-row/location-row.comp
 import { OutputPinViewComponent } from './shared/output-pin-view/output-pin-view.component';
 import { LocationEditComponent } from './locations/location-edit/location-edit.component';
 import { DataTableComponent } from './shared/data-table/data-table.component';
+import { LogoutComponent } from './auth/logout/logout.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthService, AuthGuard, UnAuthGuard } from './@externals/auth.service';
+import { RequestsService } from './requests.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
+    LogoutComponent,
     SummaryComponent,
     SettingsComponent,
+    LoginComponent,
     ChartComponent,
     QuickStatusComponent,
     QuickChartComponent,
@@ -94,7 +100,12 @@ import { DataTableComponent } from './shared/data-table/data-table.component';
     HttpModule,
     appReducersGenerator()
   ],
-  providers: [],
+  providers: [
+    UnAuthGuard,
+    AuthGuard,
+    AuthService,
+    RequestsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

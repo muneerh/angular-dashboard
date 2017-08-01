@@ -8,6 +8,9 @@ import { ActivityComponent } from './activity/activity.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { LocationEditComponent } from './locations/location-edit/location-edit.component';
 import { DataTableComponent } from './shared/data-table/data-table.component';
+import { AuthGuard, UnAuthGuard } from './@externals/auth.service';
+import { LoginComponent } from './auth/login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 export const appRoutes: Routes = [
     {
@@ -19,6 +22,18 @@ export const appRoutes: Routes = [
         path: 'summary',
         component: SummaryComponent,
         data: {}
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+        data: { title: 'Login page' },
+        // canActivate: [UnAuthGuard]
+    },
+    {
+        path: 'logout',
+        component: LogoutComponent,
+        data: { title: 'Logout page' },
+        // canActivate: [AuthGuard]
     },
     {
         path: 'locations',

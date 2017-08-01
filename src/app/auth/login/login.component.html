@@ -1,0 +1,32 @@
+
+
+
+<div class="col-md-4 col-md-offset-4 form-container">
+
+  <div [class]="'alert alert-' + dialogResult.type" role="alert" *ngIf='dialogResult.message'>
+    {{dialogResult.message}}
+  </div>
+
+  <app-forms-text-input
+    placeholder="Type your username please"
+    icon="icon icon-user"
+    name="Username or email"
+    [value]="form.username"
+    (onChange)="updateForm('username', $event)"
+    >
+  </app-forms-text-input>
+  <app-forms-text-input
+    placeholder="Type your password please"
+    icon="icon icon-key"
+    name="Password"
+    [value]="form.password"
+    (onChange)="updateForm('password', $event)"
+    >
+  </app-forms-text-input>
+
+  <a class="btn btn-primary" (click)="onSubmit()">
+    <i class="icon icon-login"></i>
+    Login now
+  </a>
+</div>
+
