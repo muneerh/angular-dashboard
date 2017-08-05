@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php"    >
+First name:<br>
+<input type="text" name="firstname"   required>
+<br>
+Last name:<br>
+<input type="text" name="lastname"  required>
+<br><br>
+Email:<br>
+<input type="email" name="Email"  required>
+<br><br>
+<br>
+Password:<br>
+<input type="password" name="password"  required>
+<br><br>
+<br><br>
+Phone Number:<br>
+<input type="text" name="Number"  required>
+
+<br><br>
+Address 1:<br>
+<input type="text" name="Address 1"  placeholder= " United States,Washington ,Building Number" required>
+<br><br>
+Address 2:<br>
+<input type="text" name="Address 1" >
+<br><br>
+<br><br>
+
+
+<input type="submit">
+‎<INPUT TYPE="reset">‎
+</form>
+
+<p>Note that the form itself is not visible.</p>
+
+
+</body>
+</html>
+
+this is a simple code and if you want any chang or add any thing contact with me 
